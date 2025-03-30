@@ -1,10 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'standalone',
   experimental: {
-    esmExternals: false, // Helps with module resolution
+    appDir: true,  // Ensure this is enabled
   },
-  transpilePackages: ['@radix-ui/react-label'], // Add actual packages you use
-};
+}
 
-export default nextConfig;
+module.exports = nextConfig;
