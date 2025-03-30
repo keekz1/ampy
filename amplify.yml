@@ -10,15 +10,12 @@ frontend:
   phases:
     preBuild:
       commands:
-        # Install required dependencies explicitly
         - npm install --save-dev @tailwindcss/postcss tailwindcss postcss autoprefixer
         - npm install bcryptjs
         # Verify installations
         - npm ls @tailwindcss/postcss tailwindcss bcryptjs
     build:
       commands:
-        # Ensure proper PostCSS config exists
-        - echo "module.exports = { plugins: { '@tailwindcss/postcss': { config: './tailwind.config.js' }, autoprefixer: {} } 
         - npm run build
   artifacts:
     baseDirectory: .next
