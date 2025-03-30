@@ -4,8 +4,7 @@ const nextConfig: NextConfig = {
   experimental: {
     esmExternals: false, // Helps with module resolution
   },
-  // Ensure proper transpilation of PostCSS config
-  transpilePackages: ['postcss-config'], 
+  transpilePackages: ['@radix-ui/react-label'], // Add actual packages you use
 };
 
 export default nextConfig;
